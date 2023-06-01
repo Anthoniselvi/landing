@@ -1,38 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .App {
   text-align: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100px;
+  padding: 0px 50px;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+h1{
+  font-family: 'Dancing Script', cursive;
+}
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(2) {
+  flex: 3;
+}
+
+.item:last-child {
+  justify-content: flex-end;
+}
+
+.texts {
+  margin-left: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text:first-child {
+  font-size: 12px;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.text:last-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #010708;
+ 
+}
+
+.listItem {
+  margin: 20px;
+  font-weight: 500;
+}
+.signup-btn{
+  background-color: #101a34;
+}
+.home-container{
+  background-image: url("/public/img/bg.png");
+  height:calc(100vh - 100px);
+  width: 100%;
+  background-size: cover;
+}
+
+@media screen and (max-width:480px) {
+  .item:nth-child(2) {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .item:nth-child(1) {
+    flex: 3;
   }
+}
+.home-banner-container {
+  position: relative;
+  display: flex;
+  padding-top: 3rem;
+}
+.home-bannerImage-container {
+  position: absolute;
+  top: -100px;
+  right: -170px;
+  z-index: -2;
+  max-width: 700px;
+}
+.home-image-section {
+  max-width: 600px;
+  flex: 1;
+}
+.home-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about-container{
+  height: 100vh;
 }
